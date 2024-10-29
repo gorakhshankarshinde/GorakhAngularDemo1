@@ -1,9 +1,5 @@
 <h1>About</h1>
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -74,16 +70,14 @@ html {
   }
 }
 </style>
-</head>
-<body>
 
 <div class="about-section">
-  <h1>About Us Page</h1>
-  <p>Some text about who we are and what we do.</p>
-  <p>Resize the browser window to see that this page is responsive by the way.</p>
+  <h1>About Us</h1>
+  <h2>Gorakh Pure Veg restarunt.</h2>
+  <h3>शुद्ध शाखाहारी हॉटेल</h3>
 </div>
 
-<h2 style="text-align:center">Our Team</h2>
+<!-- <h2 style="text-align:center">Our Team</h2> -->
 <div class="row">
   <div class="column">
     <div class="card">
@@ -91,10 +85,10 @@ html {
       <img [src]="GorakhImagePath" width="200" height="250"/>
       <div class="container">
         <h2>Gorakh Shinde</h2>
-        <p class="title">CEO & Founder</p>
-        <p>Master In CS</p>
-        <p>gorakhshankarshinde@gmail.com</p>
-        <p><button class="button">Contact</button></p>
+        <p>CEO & Founder</p>
+        <p>Master in computer science.</p>
+        
+        <p><button class="button " data-bs-toggle="modal" data-bs-target="#exampleModal">Contact</button></p>
       </div>
     </div>
   </div>
@@ -104,17 +98,53 @@ html {
         <img [src]="AishwaryaImagePath" width="200" height="250"/>
       <div class="container">
         <h2>Aishwarya Shinde</h2>
-        <p class="title">Art Director</p>
-        <p>Master In Computer</p>
-        <p>aishwaryagorakhshinde@gmail.com</p>
-        <p><button class="button">Contact</button></p>
+        <p>Art Director</p>
+        <p>Master in computer application.</p>
+        <p><button class="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Contact</button></p>
       </div>
     </div>
   </div>
   
+  <div class="column">
+    <div class="card">
+        <img [src]="Cook" width="200" height="250"/>
+      <div class="container">
+        <h2>S Shinde</h2>
+        <p >Hotel manager</p>
+        <p>Hotel management.</p>
+        <p><button class="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Contact</button></p>
+      </div>
+    </div>
+  </div>
   
 </div>
 
-</body>
-</html>
 
+<!--=============================================================================================================-->
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary, invisible" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Data Sync
+</button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Contact us</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <span>Email: </span><span>gorakhshankarshinde@gmail.com</span><br>
+        <span>Phone: +46-730518839</span><br>
+        <p>Feel free to call us on above phone number.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--=============================================================================================================-->

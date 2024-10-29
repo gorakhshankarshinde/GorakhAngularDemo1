@@ -1,21 +1,76 @@
-<h1>Dashboard</h1>
+<nav>
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="">Home</a></li>
+    <li class="breadcrumb-item active">Dashboard</li>
+  </ol>
+</nav>
+<h2>Dashboard</h2>
+<div class="row">
+  <div class="col-lg-3" style="background-color: gainsboro;">
+    <div class="row">
+      <div class="col-11 text-white text-center mx-2 rounded pt-2 font-weight-bold" style="background-color: darkgray; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+        {{Designation}}
+      </div>
+      <div class="col-12 text-center mt-2">
+        <img src="assets/Images/user.jpg" width="120px">
+      </div>
+      <div class="col-12 text-center pt-2 pb-2 font-weight-bold" style="font-family:Tahoma">
+        {{UserName}}
+      </div>
+      <div class="col-12 text-center pt-2 pb-2" style="font-family: Arial">
+        Team Summary
+      </div>
+      <div class="col-12 mb-3" style="font-family: Arial">
+        <ul class="list-group">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            No. Of Team members
+            <span class="badge badge-secondary badge-pill" style="font-size: 15px;color: black;">{{NoOfTeamMembers}}</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Total cost of all projects
+            <span class="badge badge-secondary badge-pill" style="font-size: 15px;color: black;">${{TotalCostOfAllProjects}}</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Pending tasks
+            <span class="badge badge-secondary badge-pill" style="font-size: 15px;color: black;">{{PendingTasks}}</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Upcoming projects
+            <span class="badge badge-secondary badge-pill" style="font-size: 15px;color: black;">{{UpComingProjects}}</span>
+          </li>
+        </ul>
+      </div>
+      <div class="col-12 text-center pt-2 pb-2" style="font-family: 'Arial Narrow'">
+        Clients
+      </div>
+      <div class="col-12">
+       <ul class="list-group list-group-flush">
+        <li class="list-group-item">Gorakh System Pvt. Ltd.</li>
+        <li class="list-group-item">ABCD software solutions</li>
+        <li class="list-group-item">Test industries</li>
 
-<hr/>
+       </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="col-12 pt-0 pb-2" style="background-color: gainsboro;">
+      <div class="row mt-2">
+        <div class="col-6 text-left">
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </button>
+            <ul class="dropdown-menu">
+              <li><button class="dropdown-item" type="button">Action</button></li>
+              <li><button class="dropdown-item" type="button">Another action</button></li>
+              <li><button class="dropdown-item" type="button">Something else here</button></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3">Box3</div>
+</div>
 
-<form>
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-    </div>
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1">
-    </div>
-    <div class="mb-3 form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-      <label class="form-check-label" for="exampleCheck1">Check me out</label>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
-  

@@ -1,0 +1,37 @@
+/* Center the buttons */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px;
+  }
+  
+  /* Style for buttons */
+  .btn {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding */
+    border: none; /* Remove borders */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    font-size: 16px; /* Font size */
+    font-weight: bold;
+    text-transform: uppercase; /* Uppercase text */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transition effect */
+  }
+  
+  /* Hover effect */
+  .btn:hover {
+    background-color: #45a049; /* Darker green */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
+  
+  /* Active button (when clicked) */
+  .btn:active {
+    background-color: #3e8e41; /* Even darker green */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Reduce shadow */
+    transform: scale(0.98); /* Slightly shrink when clicked */
+  }
+  

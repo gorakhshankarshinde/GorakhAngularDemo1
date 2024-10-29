@@ -10,6 +10,17 @@ export class LoginComponent {
 
     btnLoginSubmit()
     {
-      alert("Login successful...");
+      var userName = ((document.getElementById("txtUserName") as HTMLInputElement).value);
+      var pass = ((document.getElementById("txtPassword") as HTMLInputElement).value);
+
+      if(userName.toUpperCase() == "GORAKH" && pass.toUpperCase() == "GORAKH")
+      {
+        alert("Login successful...");
+      }
+      else
+      {
+        alert("Invalid user name or password.");
+      }
+    
     }
 }

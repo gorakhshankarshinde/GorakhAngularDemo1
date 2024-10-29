@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent {
-  GorakhImagePath: string = "../assets/Images/Gorakh.jpg";
-  AishwaryaImagePath: string = "../assets/Images/Aishwarya.jpg";
+  GorakhImagePath: string = "../GorakhAngularDemo1/assets/Images/Gorakh.jpg";
+  AishwaryaImagePath: string = "../GorakhAngularDemo1/assets/Images/Aishwarya.jpg";
+  Cook: string = "../GorakhAngularDemo1/assets/Images/cook.jpg";
 }

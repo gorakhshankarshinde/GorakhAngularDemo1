@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,Output,EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AngularDemoTest1';
+  FrontWallpaper: string = "../assets/HomeImages/restaurant.jpg";
+
+ 
 }
 
 

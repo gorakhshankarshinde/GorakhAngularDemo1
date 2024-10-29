@@ -1,0 +1,6 @@
+<div *ngIf=quote>
+    <h2>Quote of the Day</h2>
+    <p>{{ quote.body }}</p>
+    <p>{{ quote.author }}</p>
+  </div>
+  <button (click)=fetchQuote()>Get Quote of the Day</button>
