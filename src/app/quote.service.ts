@@ -10,7 +10,7 @@ import { throwError } from 'rxjs';
 
 export class QuoteService {
 
-  private apiUrl = 'https://favqs.com/api/qotd';
+  private apiUrl = 'http://favqs.com/api/qotd';
                     
 
   constructor(private http: HttpClient) { }

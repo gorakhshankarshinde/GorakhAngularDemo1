@@ -17,24 +17,14 @@ export class QuoteApiCallComponent implements OnInit {
     this.fetchQuote();
   }
 
-  // fetchQuote() {
-  //   this.quoteService.getQuoteOfTheDay().subscribe(
-  //     (response) => {
-  //       this.quote = response.quote;
-  //     },
-  //     (error) => {
-  //       console.error('Error fetching quote of the day', error);
-  //     }
-  //   );
-  // }
-
-  fetchQuote() {
+  fetchQuote() 
+  {
     this.quoteService.getQuoteOfTheDay().subscribe({
       next: (response) => { 
         this.quote = response.quote;
       },
       error: (error) => { 
-        console.error('Error fetching quote of the day', error);
+        //console.error('Error fetching quote of the day', error);
        
       },
       complete: () => { 
