@@ -17,6 +17,8 @@ import { LunchComponent } from './lunch/lunch.component';
 import { DinnerComponent } from './dinner/dinner.component';
 import { ChildComponent } from './child/child.component';
 import { LearnABCDComponent } from './learn-abcd/learn-abcd.component';
+import { QuoteApiCallComponent } from './quote-api-call/quote-api-call.component';
+ import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -34,12 +36,15 @@ import { LearnABCDComponent } from './learn-abcd/learn-abcd.component';
     LunchComponent,
     DinnerComponent,
     ChildComponent,
-    LearnABCDComponent
+    LearnABCDComponent,
+    QuoteApiCallComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    NgbModule
+     AppRoutingModule,
+     NgbModule,
+     StudentModule,
+     HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
