@@ -1,0 +1,115 @@
+<h1>Menu card</h1>
+
+<style>
+
+.accordion-button:not(.collapsed) {
+   
+    background-color: #d1e7dd;
+   
+}
+</style>
+
+<hr/>
+
+<div class="card border-success mb-3" style="width: 100%;">
+  <div class="card-header bg-transparent border-success">Menu Card</div>
+  <div class="card-body text-success">
+    <h5 class="card-title">Welcome</h5>
+   
+    <div class="accordion" style="background-color: #d1e7dd;" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Breakfast Items (Available time: 7:00 AM To 10:00 AM)
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <table class="table table-success table-striped">
+              <tbody>
+                <tr>
+                  <th *ngFor="let field of breakfast_items[0] | keyvalue: returnZero">{{field.key}}</th>
+                </tr>
+                <tr *ngFor="let item of breakfast_items">
+                  <td *ngFor="let field of item | keyvalue: returnZero">{{field.value}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Lunch Items (Available time: 11:00 AM To 02:00 PM )
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <table class="table table-success table-striped">
+                <tbody>
+                  <tr>
+                    <th *ngFor="let field of lunch_items[0] | keyvalue: returnZero">{{field.key}}</th>
+                  </tr>
+                  <tr *ngFor="let item of lunch_items">
+                    <td *ngFor="let field of item | keyvalue: returnZero">{{field.value}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Dinner Items (Available time: 06:00 PM To 10:00 PM )
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <table class="table table-success table-striped">
+                <tbody>
+                  <tr>
+                    <th *ngFor="let field of Dinner_items[0] | keyvalue: returnZero">{{field.key}}</th>
+                  </tr>
+                  <tr *ngFor="let item of Dinner_items">
+                    <td *ngFor="let field of item | keyvalue: returnZero">{{field.value}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer bg-transparent border-success">©GorakhShinde</div>
+</div>
+
+
+
+<!--=============================================================================================================-->
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary, invisible" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Data Sync
+</button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Verifing data</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        No data available.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--=============================================================================================================-->

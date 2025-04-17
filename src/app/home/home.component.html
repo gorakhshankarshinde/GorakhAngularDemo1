@@ -1,0 +1,265 @@
+<!-- <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa;
+    }
+    header {
+        background-color: #343a40;
+        color: white;
+        padding: 1em 0;
+        text-align: center;
+    }
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 2em 0;
+    }
+    .menu-section {
+        margin-bottom: 2em;
+    }
+    .menu-section h2 {
+        color: #343a40;
+        border-bottom: 2px solid #343a40;
+        padding-bottom: 0.5em;
+    }
+    .menu-items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .menu-item {
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        margin: 0.5em;
+        padding: 1em;
+        width: 30%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    .menu-item img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 4px;
+    }
+    .menu-item h3 {
+        margin: 0.5em 0;
+        color: #343a40;
+    }
+    .menu-item p {
+        color: #666;
+    }
+  </style>
+  
+  
+  <div class="container">
+    <section class="menu-section">
+        <h2>Breakfast</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img [src]="BreakfastItem1_Pohe" width="200" height="250" alt="Pohe">
+                <h3>Delicious Pohe</h3>
+                <p>Maharashtrian delicious pohe.</p>
+                <h5>30/- SEK Per plate</h5>
+            </div>
+            <div class="menu-item">
+                <img [src]="BreakfastItem2_MeduVada" width="200" height="250" alt="MeduVada">
+                <h3>Medu Vada</h3>
+                <p>A classic medu vada.</p>
+                <h5>50/- SEK Per plate</h5>
+            </div>
+            <div class="menu-item">
+                <img [src]="BreakfastItem3_Idli" width="200" height="250" alt="Idli">
+                <h3>Idli-Sambar</h3>
+                <p>A delicious south-indian style idli-Sambar</p>
+                <h5>50/- SEK Per plate</h5>
+            </div>
+        </div>
+    </section>
+    
+    <section class="menu-section">
+        <h2>Lunch</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img [src]="LunchItem1_ThaliOne" alt="Thali One">
+                <h3>Standard veg thali</h3>
+                <p>Maharashtrian standard veg thali.</p>
+                <h5>150/- SEK Per plate</h5>
+            </div>
+            <div class="menu-item">
+                <img [src]="LunchItem2_ThaliTwo" alt="Thali Two">
+                <h3>Classic thali</h3>
+                <p>Maharashtrian classic veg thali.</p>
+                <h5>170/- SEK Per plate</h5>
+            </div>
+            <div class="menu-item">
+                <img [src]="LunchItem3_ThaliThree" alt="Thali Three">
+                <h3>Bahubali thali</h3>
+                <p>Bahubali thali including 25 items.</p>
+                <h5>200/- SEK Per plate</h5>
+            </div>
+        </div>
+    </section>
+
+
+  
+    <section class="menu-section">
+        <h2>Dinner</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img [src]="LunchItem1_ThaliOne" alt="Thali One">
+                <h3>Standard veg thali</h3>
+                <p>Maharashtrian standard veg thali.</p>
+                <h5>150/- SEK Per plate</h5>
+            </div>
+            <div class="menu-item">
+                <img [src]="LunchItem2_ThaliTwo" alt="Thali Two">
+                <h3>Classic thali</h3>
+                <p>Maharashtrian classic veg thali.</p>
+                <h5>170/- SEK Per plate</h5>
+            </div>
+            <div class="menu-item">
+                <img [src]="LunchItem3_ThaliThree" alt="Thali Three">
+                <h3>Bahubali thali</h3>
+                <p>Bahubali thali including 25 items.</p>
+                <h5>200/- SEK Per plate</h5>
+            </div>
+        </div>
+    </section>
+  </div> -->
+  
+ <div class="container">
+   
+    <div class="row mb-3" style="margin:1rem;">
+        Breakfast
+        <hr>
+        <div class="card" style="width: 20rem; margin:1rem;">
+            <img [src]="BreakfastItem1_Pohe" class="card-img-top" alt="Pohe">
+            <div class="card-body">
+              <h5 class="card-title">Pohe</h5>
+              <p class="card-text">Maharashtrian delicious pohe.</p>
+              <h6 class="card-text">30 SEK</h6>
+              <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy</a>
+            </div>
+          </div>
+          <div class="card" style="width: 20rem; margin:1rem;">
+            <img [src]="BreakfastItem2_MeduVada" class="card-img-top" alt="Pohe">
+            <div class="card-body">
+              <h5 class="card-title">Medu-Vada</h5>
+              <p class="card-text">A classic medu vada.</p>
+              <h6 class="card-text">50 SEK</h6>
+              <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy</a>
+            </div>
+          </div>
+          <div class="card" style="width: 20rem; margin:1rem;">
+            <img [src]="BreakfastItem3_Idli" class="card-img-top" alt="Pohe">
+            <div class="card-body">
+              <h5 class="card-title">Idli-Sambar</h5>
+              <p class="card-text">Delicious south-indian style idli-Sambar</p>
+              <h6 class="card-text">50 SEK</h6>
+              <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy</a>
+            </div>
+          </div>
+          
+     </div>
+
+ </div>
+
+ <div class="container">
+    <div class="row mb-3" style="margin:1rem;">
+        Lunch
+        <hr>
+        <div class="card" style="width: 20rem; margin:1rem;">
+            <img [src]="LunchItem1_ThaliOne" class="card-img-top" alt="Pohe">
+            <div class="card-body">
+              <h5 class="card-title">Standard veg thali</h5>
+              <p class="card-text">Maharashtrian standard veg thali.</p>
+              <h6 class="card-text">150 SEK</h6>
+              <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy</a>
+            </div>
+          </div>
+          <div class="card" style="width: 20rem; margin:1rem;">
+            <img [src]="LunchItem2_ThaliTwo" class="card-img-top" alt="Pohe">
+            <div class="card-body">
+              <h5 class="card-title">Classic thali</h5>
+              <p class="card-text">Maharashtrian classic veg thali.</p>
+              <h6 class="card-text">170 SEK</h6>
+              <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy</a>
+            </div>
+          </div>
+          <div class="card" style="width: 20rem; margin:1rem;">
+            <img [src]="LunchItem3_ThaliThree" class="card-img-top" alt="Pohe">
+            <div class="card-body">
+              <h5 class="card-title">Bahubali</h5>
+              <p class="card-text">Bahubali thali including 25 items.</p>
+              <h6 class="card-text">200 SEK</h6>
+              <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy</a>
+            </div>
+          </div>
+     </div>
+ </div>
+
+ <div class="container">
+    <div class="row mb-3" style="margin:1rem;">
+        Dinner
+        <hr>
+        <div class="card" style="width: 20rem; margin:1rem;">
+            <img [src]="LunchItem1_ThaliOne" class="card-img-top" alt="Pohe">
+            <div class="card-body">
+              <h5 class="card-title">Standard thali</h5>
+              <p class="card-text">Maharashtrian standard veg thali.</p>
+              <h6 class="card-text">150 SEK</h6>
+              <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy</a>
+            </div>
+          </div>
+          <div class="card" style="width: 20rem; margin:1rem;">
+            <img [src]="LunchItem2_ThaliTwo" class="card-img-top" alt="Pohe">
+            <div class="card-body">
+              <h5 class="card-title">Classic thali</h5>
+              <p class="card-text">Maharashtrian classic veg thali.</p>
+              <h6 class="card-text">170 SEK</h6>
+              <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy</a>
+            </div>
+          </div>
+          <div class="card" style="width: 20rem; margin:1rem;">
+            <img [src]="LunchItem3_ThaliThree" class="card-img-top" alt="Pohe">
+            <div class="card-body">
+              <h5 class="card-title">Bahubali thali</h5>
+              <p class="card-text">Bahubali thali including 25 items.</p>
+              <h6 class="card-text">200 SEK</h6>
+              <a href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy</a>
+            </div>
+          </div>
+     </div>
+ </div>
+
+ <!--=============================================================================================================-->
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-success, invisible" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Data Sync
+</button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Information</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+           Item is added!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Close</button>
+          <!-- <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!--=============================================================================================================-->
+ 

@@ -6,6 +6,28 @@ import { Component } from '@angular/core';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent {
-  GorakhImagePath: string = "../assets/Images/Gorakh.jpg";
-  AishwaryaImagePath: string = "../assets/Images/Aishwarya.jpg";
+  GorakhImagePath: string = "../GorakhAngularDemo1/assets/Images/Gorakh.jpg";
+  AishwaryaImagePath: string = "../GorakhAngularDemo1/assets/Images/Aishwarya.jpg";
+  Cook: string = "../GorakhAngularDemo1/assets/Images/cook.jpg";
+
+  teamMembers = [
+    {
+      name: 'Gorakh Shinde',
+      role: 'CEO & Founder',
+      bio: 'Master in Computer Science.',
+      image: this.GorakhImagePath
+    },
+    {
+      name: 'Aishwarya Shinde',
+      role: 'Art Director',
+      bio: 'Master in Computer Applications.',
+      image: this.AishwaryaImagePath
+    },
+    {
+      name: 'S Shinde',
+      role: 'Hotel Manager',
+      bio: 'Specialist in Hotel Management.',
+      image: this.Cook
+    }
+  ];
 }
