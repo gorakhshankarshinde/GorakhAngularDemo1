@@ -1,80 +1,3 @@
-<h1>About</h1>
-
-<style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-}
-
-html {
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-.column {
-  float: left;
-  width: 33.3%;
-  margin-bottom: 16px;
-  padding: 0 8px;
-}
-
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin: 8px;
-}
-
-.about-section {
-  padding: 50px;
-  text-align: center;
-  background-color: #198754;
-  color: white;
-}
-
-.container {
-  padding: 0 16px;
-}
-
-.container::after, .row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-.title {
-  color: #eff5f2;
-}
-
-.button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #198754;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-}
-
-.button:hover {
-  background-color: #7af180;
-}
-
-@media screen and (max-width: 650px) {
-  .column {
-    width: 100%;
-    display: block;
-  }
-}
-</style>
-
-<div class="about-section">
-  <h1>About Us</h1>
-  <h2>Gorakh Pure Veg restarunt.</h2>
-  <h3>शुद्ध शाखाहारी हॉटेल</h3>
 <!-- about.component.html -->
 <div class="about-section text-white text-center py-5">
   <h1>About Us</h1>
@@ -82,21 +5,6 @@ html {
   <h4 class="fst-italic">शुद्ध शाकाहारी हॉटेल</h4>
 </div>
 
-<!-- <h2 style="text-align:center">Our Team</h2> -->
-<div class="row">
-  <div class="column">
-    <div class="card">
-      <!-- <img [src]="GorakhImagePath" alt="Gorakh" style="width:100%"> -->
-      <img [src]="GorakhImagePath" width="200" height="250"/>
-      <div class="container">
-        <h2>Gorakh Shinde</h2>
-        <p>CEO & Founder</p>
-        <p>Master in computer science.</p>
-        
-        <p><button class="button " data-bs-toggle="modal" data-bs-target="#exampleModal">Contact</button></p>
-      </div>
-    </div>
-  </div>
 <div class="container my-5">
   <div class="row justify-content-center g-4">
     <!-- Team Member -->
@@ -116,14 +24,6 @@ html {
   </div>
 </div>
 
-  <div class="column">
-    <div class="card">
-        <img [src]="AishwaryaImagePath" width="200" height="250"/>
-      <div class="container">
-        <h2>Aishwarya Shinde</h2>
-        <p>Art Director</p>
-        <p>Master in computer application.</p>
-        <p><button class="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Contact</button></p>
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -142,47 +42,4 @@ html {
       </div>
     </div>
   </div>
-  
-  <div class="column">
-    <div class="card">
-        <img [src]="Cook" width="200" height="250"/>
-      <div class="container">
-        <h2>S Shinde</h2>
-        <p >Hotel manager</p>
-        <p>Hotel management.</p>
-        <p><button class="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Contact</button></p>
-      </div>
-    </div>
-  </div>
-  
 </div>
-
-
-<!--=============================================================================================================-->
-<!-- Button trigger modal -->
-<!-- <button type="button" class="btn btn-primary, invisible" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Data Sync
-</button> -->
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Contact us</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <span>Email: </span><span>gorakhshankarshinde@gmail.com</span><br>
-        <span>Phone: +46-730518839</span><br>
-        <p>Feel free to call us on above phone number.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Close</button>
-        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-      </div>
-    </div>
-  </div>
-</div>
-
-<!--=============================================================================================================-->
