@@ -13,11 +13,11 @@ export class DashboardComponent {
   todayDate = new Date();
 
   todayCustomers = [
-    'Ravi Kumar',
-    'Sita Sharma',
-    'Amit Patel',
-    'Neha Verma',
-    'Rajesh Meena'
+    {customerName:'G Shinde', mobileNumber: "+91-1111122222"}, 
+    {customerName:'G Shinde', mobileNumber: "+91-1111122222"},
+    {customerName:'G Shinde', mobileNumber: "+91-1111122222"}
+    
+    
   ];
 
 
