@@ -7,10 +7,9 @@ import { Component } from '@angular/core';
 })
 export class LearnABCDComponent {
 
-
-
-  img: string = "";
-
+  img: string = "../GorakhAngularDemo1/assets/ABCD/learnAlphabet.jpg";
+  
+  
    // Method triggered when a button is clicked
    onButtonClick(value: string) {
     //console.log('Selected Button:', value);

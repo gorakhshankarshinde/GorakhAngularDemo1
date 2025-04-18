@@ -1,0 +1,23 @@
+.about-section {
+    background: linear-gradient(to right, #198754, #27ae60);
+    padding: 60px 20px;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  .card-subtitle {
+    font-size: 0.95rem;
+  }
+  
+  .modal-header {
+    border-bottom: none;
+  }
+  
