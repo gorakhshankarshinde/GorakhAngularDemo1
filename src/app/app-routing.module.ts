@@ -12,6 +12,7 @@ import { LunchComponent } from './lunch/lunch.component';
 import { DinnerComponent } from './dinner/dinner.component';
 import { LearnABCDComponent } from './learn-abcd/learn-abcd.component';
 import { DefaultPageComponent } from './default-page/default-page.component';
+import { JokesComponent } from './jokes/jokes.component';
 
 
 const routes: Routes = [
@@ -36,6 +37,7 @@ const routes: Routes = [
   {path:"lunch", component:LunchComponent},
   {path:"dinner", component: DinnerComponent},
   {path:"learnABCD", component: LearnABCDComponent},
+  {path:"jokes", component: JokesComponent},
   {path:"", component:DefaultPageComponent}
 
 ];
