@@ -20,6 +20,8 @@ import { LearnABCDComponent } from './learn-abcd/learn-abcd.component';
 import { QuoteApiCallComponent } from './quote-api-call/quote-api-call.component';
  import { HttpClientModule } from '@angular/common/http';
 import { JokesComponent } from './jokes/jokes.component';
+import { OrderFormComponent } from './order-form/order-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -40,14 +42,16 @@ import { JokesComponent } from './jokes/jokes.component';
     ChildComponent,
     LearnABCDComponent,
     QuoteApiCallComponent,
-    JokesComponent
+    JokesComponent,
+    OrderFormComponent
   ],
   imports: [
     BrowserModule,
      AppRoutingModule,
      NgbModule,
      StudentModule,
-     HttpClientModule
+     HttpClientModule,
+     ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

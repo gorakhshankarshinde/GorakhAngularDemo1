@@ -1,0 +1,69 @@
+<form [formGroup]="orderForm">
+    <div>
+      <label>Order Number:</label>
+      <input formControlName="orderNumber" readonly />
+    </div>
+  
+    <div>
+        <label>Customer Mobile:</label>
+        <input formControlName="customerMobile" />
+        <div *ngIf="orderForm.get('customerMobile')?.invalid && orderForm.get('customerMobile')?.touched" style="color:red;">
+          Please enter a valid 10-digit mobile number.
+        </div>
+      </div>
+      
+      <div>
+        <label>Customer Name:</label>
+        <input formControlName="customerName" />
+        <div *ngIf="orderForm.get('customerName')?.invalid && orderForm.get('customerName')?.touched" style="color:red;">
+          Please enter a valid name (letters only).
+        </div>
+      </div>
+      
+  
+    <div>
+      <label>Select Item:</label>
+      <select formControlName="item">
+        <option *ngFor="let item of items" [value]="item.name">
+          {{ item.name }} - {{ item.price }} SEK
+        </option>
+      </select>
+    </div>
+  
+    <div>
+      <label>Quantity:</label>
+      <input type="number" formControlName="quantity" min="1" />
+    </div>
+  
+    <div>
+      <strong>Total Price:</strong> {{ totalPrice }} SEK
+    </div>
+  
+    <button type="button" [disabled]="!orderForm.valid" (click)="submitOrder()">Place Order</button>
+
+  </form>
+
+ <!-- Modal -->
+<div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content border-success">
+        <div class="modal-header bg-success text-white">
+          <h1 class="modal-title fs-5" id="orderModalLabel">Order Placed</h1>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <p class="text-success fw-bold">Order successfully added!</p>
+          <hr>
+          <p><strong>Order Number:</strong> {{ orderForm.value.orderNumber }}</p>
+          <p><strong>Name:</strong> {{ orderForm.value.customerName }}</p>
+          <p><strong>Mobile:</strong> {{ orderForm.value.customerMobile }}</p>
+          <p><strong>Item:</strong> {{ orderForm.value.item }}</p>
+          <p><strong>Quantity:</strong> {{ orderForm.value.quantity }}</p>
+          <p><strong>Total Price:</strong> {{ totalPrice }} SEK</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  

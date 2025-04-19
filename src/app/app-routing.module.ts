@@ -13,6 +13,7 @@ import { DinnerComponent } from './dinner/dinner.component';
 import { LearnABCDComponent } from './learn-abcd/learn-abcd.component';
 import { DefaultPageComponent } from './default-page/default-page.component';
 import { JokesComponent } from './jokes/jokes.component';
+import { OrderFormComponent } from './order-form/order-form.component';
 
 
 const routes: Routes = [
@@ -38,6 +39,8 @@ const routes: Routes = [
   {path:"dinner", component: DinnerComponent},
   {path:"learnABCD", component: LearnABCDComponent},
   {path:"jokes", component: JokesComponent},
+  {path:"customerOrder", component: OrderFormComponent},
+  
   {path:"", component:DefaultPageComponent}
 
 ];
