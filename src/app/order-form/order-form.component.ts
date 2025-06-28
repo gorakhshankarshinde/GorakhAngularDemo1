@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { OrderService } from '../order.service';
 import { Item } from '../item.model';
-import { Validators } from '@angular/forms';
+
 declare var window: any;
 
 @Component({
@@ -18,29 +18,35 @@ export class OrderFormComponent implements OnInit {
   constructor(private fb: FormBuilder, private orderService: OrderService) {}
 
   ngOnInit(): void {
-    const orderNumber = this.orderService.getNextOrderNumber();
-    this.items = this.orderService.getItems();
-
+  // Step 1: Load order number
+  this.orderService.getNextOrderNumberAsync().subscribe(orderNumber => {
+    // Step 2: Build the form
     this.orderForm = this.fb.group({
-      orderNumber: [orderNumber],
+      orderNumber: [{ value: orderNumber, disabled: true }],
       customerMobile: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
       customerName: ['', [Validators.required, Validators.pattern(/^[A-Za-z\s]+$/)]],
       item: ['', Validators.required],
       quantity: [1, [Validators.required, Validators.min(1)]]
     });
 
-    this.orderForm.valueChanges.subscribe(val => {
-      const selectedItem = this.items.find(i => i.name === val.item);
-      if (selectedItem) {
-        this.totalPrice = selectedItem.price * val.quantity;
-      }
-    });
-  }
+    // Step 3: Load items from API
+    this.orderService.fetchItems().subscribe(items => {
+      this.items = items;
 
-  
+      // Step 4: Calculate total price when item or quantity changes
+      this.orderForm.valueChanges.subscribe(val => {
+        const selectedItem = this.items.find(i => i.name === val.item);
+        if (selectedItem) {
+          this.totalPrice = selectedItem.price * val.quantity;
+        }
+      });
+    });
+  });
+}
+
+
   submitOrder(): void {
     if (this.orderForm.valid) {
-      // Bootstrap modal JS logic
       const modalElement = document.getElementById('orderModal');
       if (modalElement) {
         const modal = new window.bootstrap.Modal(modalElement);
@@ -48,6 +54,4 @@ export class OrderFormComponent implements OnInit {
       }
     }
   }
-
-  
 }

@@ -1,0 +1,38 @@
+<div class="user-master-container">
+    <h2>User Master</h2>
+  
+    <!-- Users List -->
+    <div class="users-list">
+      <h3>User Details</h3>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>User ID</th>
+            <th>Full Name</th>
+            <th>Contact Number</th>
+            <th>Email Address</th>
+            <th>User Type</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{ user.userId }}</td>
+            <td>{{ user.userFullName }}</td>
+            <td>{{ user.userContactNumber }}</td>
+            <td>{{ user.userEmailAddress }}</td>
+            <td>{{ user.userType }}</td>
+            <td>
+              <button class="btn btn-info">Edit</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <!-- Add New User Button -->
+    <div class="add-user-button">
+      <button class="btn btn-primary" >Add New User</button>
+    </div>
+  </div>
+  

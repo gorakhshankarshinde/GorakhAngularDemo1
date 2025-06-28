@@ -22,6 +22,7 @@ import { QuoteApiCallComponent } from './quote-api-call/quote-api-call.component
 import { JokesComponent } from './jokes/jokes.component';
 import { OrderFormComponent } from './order-form/order-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { UserMasterComponent } from './User/user-master/user-master.component';
 
 
 
@@ -43,7 +44,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     LearnABCDComponent,
     QuoteApiCallComponent,
     JokesComponent,
-    OrderFormComponent
+    OrderFormComponent,
+    UserMasterComponent
   ],
   imports: [
     BrowserModule,

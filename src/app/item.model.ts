@@ -1,5 +1,4 @@
 export interface Item {
-    name: string;
-    price: number;
-  }
-  
+  name: string;  // mapped from menuItemName
+  price: number; // mapped from price
+}

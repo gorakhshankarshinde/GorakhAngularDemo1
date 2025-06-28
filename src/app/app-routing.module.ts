@@ -14,6 +14,7 @@ import { LearnABCDComponent } from './learn-abcd/learn-abcd.component';
 import { DefaultPageComponent } from './default-page/default-page.component';
 import { JokesComponent } from './jokes/jokes.component';
 import { OrderFormComponent } from './order-form/order-form.component';
+import { UserMasterComponent } from './User/user-master/user-master.component';
 
 
 const routes: Routes = [
@@ -40,7 +41,7 @@ const routes: Routes = [
   {path:"learnABCD", component: LearnABCDComponent},
   {path:"jokes", component: JokesComponent},
   {path:"customerOrder", component: OrderFormComponent},
-  
+  {path:"UserMaster", component: UserMasterComponent},
   {path:"", component:DefaultPageComponent}
 
 ];

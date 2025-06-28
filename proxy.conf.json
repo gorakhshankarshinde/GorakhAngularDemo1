@@ -1,0 +1,8 @@
+{
+  "/api": {
+    "target": "https://hotelmanagementsystem-yi9b.onrender.com",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}
