@@ -1,53 +1,50 @@
 .about-section {
-    background: linear-gradient(to right, #198754, #27ae60);
-    padding: 60px 20px;
-  }
-  
-  .card:hover {
-    transform: translateY(-5px);
-    transition: transform 0.3s ease;
-  }
-  
-  .card-title {
-    font-size: 1.2rem;
-    font-weight: 600;
-  }
-  
-  .card-subtitle {
-    font-size: 0.95rem;
-  }
-  
-  .modal-header {
-    border-bottom: none;
-  }
+  background: linear-gradient(to right, #198754, #27ae60);
+  padding: 60px 20px;
+}
 
-  /* Limit card width and control image sizing */
+.card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.card-subtitle {
+  font-size: 0.95rem;
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
 .card {
-    max-width: 300px;
-    margin: auto;
-    border-radius: 12px;
-  }
-  
-  /* Keep image ratio and fit nicely inside card */
-  .team-img {
-    height: 220px;
-    width: 100%;
-    object-fit: cover;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-  }
-  
-  /* Tweak text spacing */
-  .card-text {
-    font-size: 0.85rem;
-    color: #555;
-    margin-top: 8px;
-  }
-  
-  /* Smaller button */
-  .btn {
-    font-size: 0.9rem;
-    padding: 6px 12px;
-  }
-  
-  
+  max-width: 350px;
+  margin: auto;
+  border-radius: 12px;
+  min-height: 460px;
+}
+
+.team-img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: contain;
+  background-color: #f0f0f0;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  display: block;
+}
+
+.card-text {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 8px;
+}
+
+.btn {
+  font-size: 0.9rem;
+  padding: 6px 12px;
+}
